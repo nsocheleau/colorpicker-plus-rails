@@ -172,6 +172,8 @@
     $.fn.colorpickerembed.constructor = ColorpickerEmbed;
     //singleton
     var colorpickerplus;
+    var _container;
+    var currPicker;
     $(function(){
     	colorpickerplus = $('.colorpickerplus');
     	if(colorpickerplus.length<=0) {
@@ -179,9 +181,9 @@
     	  colorpickerplus.appendTo($('body'));
     	  //console.log('append singleton to body');
     	}
-        var _container = $('<div class="colorpickerplus-container"></div>').appendTo(colorpickerplus);
+        _container = $('<div class="colorpickerplus-container"></div>').appendTo(colorpickerplus);
         _container.colorpickerembed();
-        var currPicker = null;
+        currPicker = null;
         _container.on('changeColor', function(e, val){
     	  //console.log('color:'+val);
             if(!!currPicker) {		  
