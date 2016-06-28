@@ -171,27 +171,31 @@
     };
     $.fn.colorpickerembed.constructor = ColorpickerEmbed;
     //singleton
-	var colorpickerplus = $('.colorpickerplus');
-	if(colorpickerplus.length<=0) {
-      colorpickerplus = $('<div class="colorpickerplus"></div>');
-	  colorpickerplus.appendTo($('body'));
-	  //console.log('append singleton to body');
-	}
-    var _container = $('<div class="colorpickerplus-container"></div>').appendTo(colorpickerplus);
-    _container.colorpickerembed();
-    var currPicker = null;
-    _container.on('changeColor', function(e, val){
-	  //console.log('color:'+val);
-        if(!!currPicker) {		  
-	  //console.log('color:'+val);
-            currPicker.setValue(val);
-        }
-    });
-    _container.on('select', function(){
-        if(!!currPicker) {
-            // currPicker.setValue(c);
-            hide();
-        }
+    var colorpickerplus;
+    $(function(){
+    	colorpickerplus = $('.colorpickerplus');
+    	if(colorpickerplus.length<=0) {
+          colorpickerplus = $('<div class="colorpickerplus"></div>');
+    	  colorpickerplus.appendTo($('body'));
+    	  //console.log('append singleton to body');
+    	}
+        var _container = $('<div class="colorpickerplus-container"></div>').appendTo(colorpickerplus);
+        _container.colorpickerembed();
+        var currPicker = null;
+        _container.on('changeColor', function(e, val){
+    	  //console.log('color:'+val);
+            if(!!currPicker) {		  
+    	  //console.log('color:'+val);
+                currPicker.setValue(val);
+            }
+        });
+        _container.on('select', function(){
+            if(!!currPicker) {
+                // currPicker.setValue(c);
+                hide();
+            }
+        });
+      
     });
     //var embed = _container.data('colorpickerembed');
 	/*
