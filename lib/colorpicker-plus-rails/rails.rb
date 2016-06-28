@@ -1,5 +1,3 @@
-require "colorpicker/plus/rails/version"
-
 module Colorpicker
   module Plus
     module Rails
