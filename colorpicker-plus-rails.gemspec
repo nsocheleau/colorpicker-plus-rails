@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A wrapper for bootstrap colorpicker plus in the Rails asset pipeline.}
   spec.description   = %q{Bootstrap Colorpicker Plus for Rails >= 3.1.}
-  spec.homepage      = "https://github.com/nsochele/colorpicker-plus-rails"
+  spec.homepage      = "https://github.com/nsocheleau/colorpicker-plus-rails"
 
   spec.files         = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
   spec.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
