@@ -8,14 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = Colorpicker::Plus::Rails::VERSION
   spec.authors       = ["Nicolas Socheleau"]
   spec.email         = ["nicolas@technick-consultant.com"]
-
+  spec.version       = Colorpicker::Plus::Rails::VERSION
+  
   spec.summary       = %q{A wrapper for bootstrap colorpicker plus in the Rails asset pipeline.}
   spec.description   = %q{Bootstrap Colorpicker Plus for Rails >= 3.1.}
   spec.homepage      = "https://github.com/nsocheleau/colorpicker-plus-rails"
 
   spec.files         = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
-  spec.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  spec.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  spec.executables   = spec.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
   
   spec.add_dependency "railties", ">= 3.0"
