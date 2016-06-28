@@ -247,6 +247,7 @@
 
         if ((input === false)) {
             $element.on('click', $.proxy(this.show, this));
+            this.input = false
         }
 		this.element = element;
         // $($.proxy(function() {
